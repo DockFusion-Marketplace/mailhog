@@ -1,0 +1,8 @@
+#System defaults
+system:
+  #Generate public ports for the docker image
+  ports:
+    http:
+      MAILHOG_PORT
+    others:
+      - MAILHOG_MAIL_PORT
