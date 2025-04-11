@@ -1,14 +1,10 @@
-# A Test Mail Server for a PHP Docker Container
-For a small PHP project, I created a Docker container with an Apache and PHP in order to ease local development and setup. But that was not enough because my PHP application also sends mails and I wanted to test this feature locally as well. That’s why I needed a local SMTP server for testing and integrate it into my current Docker composition. In this brief post, I show you how I achieved this.
+# MailHog in Docker
+This template provides a ready-to-use MailHog environment designed for use within Dock Fusion. MailHog is a simple email testing tool for developers that catches emails sent from your application and allows you to view them in a web interface.
 
-![ScreenShot](https://raw.githubusercontent.com/nabad600/Mailhog/main/featured-image-500.png)
+## 🚀 What's Included
 
-# If our PHP application now calls mail() it will trigger mhsendmail which in turn sends the mail to MailHog.
+- MailHog — Email catching and viewing service
 
-![ScreenShot](https://raw.githubusercontent.com/nabad600/Mailhog/main/rerd.JPG)
-
-The mail should show up in the MailHog UI under http://localhost/. We don’t even have to refresh the browser!
-![ScreenShot](https://raw.githubusercontent.com/nabad600/Mailhog/main/mailhog-screenshot.png)
-
-Moreover, we can consume the HTTP API of MailHog in our tests and verify that our PHP application has sent a mail correctly. The URL http://localhost/api/v2/messages is a good starting point. It returns something like this:
-![ScreenShot](https://raw.githubusercontent.com/nabad600/Mailhog/main/maap.JPG)
+## 📦 Requirements
+- [Docker](https://www.docker.com)
+- [Dock Fusion](https://github.com/DockFusion/dock-fusion-app/releases)

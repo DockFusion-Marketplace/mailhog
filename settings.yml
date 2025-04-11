@@ -1,3 +1,18 @@
+#User defined
+user:
+  mailhog_version:
+    label:
+      Mailhog version
+    hint:
+      Select a Mailhog version from the list above
+    type:
+      select
+    values:
+      - "1.0.0"
+      - "1.0.1"
+    target:
+      MAILHOG_VERSION
+
 #System defaults
 system:
   #Generate public ports for the docker image
