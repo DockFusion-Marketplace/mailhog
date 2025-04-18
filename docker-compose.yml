@@ -3,12 +3,13 @@ services:
     build: 
       context: './mailhog'
       dockerfile: 'Dockerfile'
+      args:
+        MAILHOG_VERSION: ${MAILHOG_VERSION}
     environment:
-      - MH_STORAGE=maildir
-      - MH_MAILDIR_PATH=/MailHog/data
+      MH_STORAGE: maildir
+      MH_MAILDIR_PATH: /MailHog/data
     volumes:
       - '${DATA_PATH_HOST}:/MailHog/data:cached'
     ports:
       - '${MAILHOG_MAIL_PORT}:1025'
       - '${MAILHOG_PORT}:8025'
-volumes: {}
